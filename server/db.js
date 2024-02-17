@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 module.exports = () => {
 	const connection = mongoose
-		.connect(process.env.MONGODB_URI)
+		.connect("mongodb://mongodb:27017/cruds")
 		.then((result) => console.log("Connected to database"))
 		.catch((err) => console.log("could not connect to database"));
 };

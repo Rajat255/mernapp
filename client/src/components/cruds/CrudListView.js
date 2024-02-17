@@ -8,7 +8,7 @@ function CrudListView() {
 	useEffect(function () {
 		async function getCruds() {
 			try {
-				const response = await axios.get("/api/cruds");
+				const response = await axios.get("http://backend:8080/api/cruds");
 				setCruds(response.data);
 			} catch (error) {
 				console.log("error", error);
