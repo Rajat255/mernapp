@@ -1,4 +1,4 @@
-version: "1"
+version: "420"
 
 services:
 
@@ -32,11 +32,11 @@ services:
       - "27017:27017"
     volumes:
       - /home/rajat/Desktop/mongo-backup:/data/db
-    command: ["mongod", "--bind_ip", "0.0.0.0", "--config", "/etc/mongod.conf"]
+      - ./mongod.conf:/etc/mongod.conf
+    command: ["mongod", "--bind_ip", "0.0.0.0", "--config", "/etc/mongod.conf"] 
     networks:
       - mern-network
 
 networks:
   mern-network:
     driver: bridge
-    
